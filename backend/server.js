@@ -1,4 +1,4 @@
-// Updated server.js - Added donations routes and multer setup
+// server.js - Updated to include user routes
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -9,6 +9,7 @@ require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
 const donationsRoutes = require('./routes/donations');
+const userRoutes = require('./routes/users'); // New user routes
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -32,6 +33,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/donations', donationsRoutes);
+app.use('/api/users', userRoutes); // New user routes
 
 // Global error handler (should be after all routes)
 app.use(errorHandler);

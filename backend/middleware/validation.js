@@ -1,3 +1,4 @@
+// middleware/validation.js - No changes needed, but included for completeness
 const Joi = require('joi');
 
 // Signup validation schema (no confirmPassword, as it's frontend-only)

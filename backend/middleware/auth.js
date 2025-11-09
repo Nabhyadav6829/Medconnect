@@ -1,4 +1,4 @@
-// middleware/auth.js - New middleware for protecting routes
+// middleware/auth.js - Updated to handle user not found case
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
@@ -16,14 +16,17 @@ const protect = async (req, res, next) => {
       // Get user from token
       req.user = await User.findById(decoded.id).select('-password');
 
+      // Check if user exists
+      if (!req.user) {
+        return res.status(401).json({ message: 'Not authorized, user not found' });
+      }
+
       next();
     } catch (error) {
       console.error('Auth middleware error:', error);
       res.status(401).json({ message: 'Not authorized, token failed' });
     }
-  }
-
-  if (!token) {
+  } else if (!token) {
     res.status(401).json({ message: 'Not authorized, no token' });
   }
 };
