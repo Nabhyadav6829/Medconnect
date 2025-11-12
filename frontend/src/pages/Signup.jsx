@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Heart, Mail, Lock, User, Phone, Eye, EyeOff, ArrowRight, Check, AlertCircle } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000/api'; // Adjust if backend URL is different
+const API_BASE_URL = 'http://localhost:5001/api'; // Adjust if backend URL is different
 
 export default function LoginSignup() {
   const [isLogin, setIsLogin] = useState(true);
@@ -120,7 +120,6 @@ export default function LoginSignup() {
     "24/7 healthcare support",
     "Secure and verified platform",
     "Free medicine pickup service",
-    "Track your donations and requests"
   ];
 
   return (
@@ -137,7 +136,7 @@ export default function LoginSignup() {
                 <div className="w-14 h-14 bg-white/20 backdrop-blur-lg rounded-xl flex items-center justify-center">
                   <Heart className="w-8 h-8 text-white" fill="white" />
                 </div>
-                <span className="text-3xl font-bold">MediConnect</span>
+                <span className="text-3xl font-bold">MedConnect</span>
               </div>
 
               <h2 className="text-4xl font-bold leading-tight mb-6">

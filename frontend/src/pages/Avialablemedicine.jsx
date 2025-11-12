@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Heart, Search, Filter, MapPin, Calendar, Package, Pill, User, Phone, ArrowRight, X, SlidersHorizontal, Loader2 } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'http://localhost:5001/api';
 import Navbar from './Navbar';
 export default function MedicineSearch() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,7 +34,9 @@ export default function MedicineSearch() {
           phone: donation.user.phone,
           instructions: donation.demand,
           image: donation.imageUrl ? `${API_BASE_URL.replace('/api', '')}${donation.imageUrl}` : 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop'
+          
         }));
+        
 
         setMedicines(mappedMedicines);
       } catch (err) {

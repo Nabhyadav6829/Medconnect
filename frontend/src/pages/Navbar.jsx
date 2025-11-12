@@ -54,13 +54,14 @@ export default function Navbar() {
                 <Heart className="w-7 h-7 text-white" fill="white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                MediConnect
+                MedConnect
               </span>
             </div>
            
             <div className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-slate-700 hover:text-blue-600 transition font-medium">Home</a>
               <a href="/about" className="text-slate-700 hover:text-blue-600 transition font-medium">About</a>
+              <a href="/upload" className="text-slate-700 hover:text-blue-600 transition font-medium">Reports</a>
               <a href="/donate" className="text-slate-700 hover:text-blue-600 transition font-medium">Donate</a>
               <a href="/medicines" className="text-slate-700 hover:text-blue-600 transition font-medium">Medicines</a>
               <a href="/partner" className="text-slate-700 hover:text-blue-600 transition font-medium">Partner</a>

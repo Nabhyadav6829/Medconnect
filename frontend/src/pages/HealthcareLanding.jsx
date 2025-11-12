@@ -40,10 +40,8 @@ export default function HealthcareLanding() {
   const benefits = [
     "Integrated platform connecting patients, doctors, hospitals, and NGOs",
     "E-prescriptions for better medication tracking",
-    "Secure cloud storage with data encryption",
     "Real-time health campaigns and community support",
     "Affordable medicine distribution system",
-    "Multi-language support for diverse populations"
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">

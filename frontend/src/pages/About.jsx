@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import { Heart, Target, Eye, Award, Users, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, ArrowRight, Lightbulb, Handshake, Stethoscope, Building, UserCheck, Activity } from 'lucide-react';
+import Preet from '../assests/Preet.jpg'
+import Nabh from '../assests/NabhImage.jpg'
+import Ankit from '../assests/AnkitImage.jpg'
+import Vidant from '../assests/VidantImage.jpg'
+import Priyanshu from '../assests/PriyanshuImage.jpg'
+import PreetImage from '../assests/PreetImage.jpg'
 
 import Navbar from './Navbar';
 
@@ -55,68 +61,32 @@ export default function AboutPage() {
   const team = [
     {
       name: 'Nabh Yadav',
-      role: 'Chief Medical Officer',
-      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop',
-      description: 'Leading medical innovation with 20+ years of experience'
+      role: 'Full Stack Developer',
+      image: Nabh
     },
     {
       name: 'Priyanshu Bhardwaj',
-      role: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
-      description: 'Visionary entrepreneur revolutionizing healthcare access'
+      role: 'Frontend Developer',
+      image: Priyanshu
     },
     {
       name: 'Ankit Patel',
-      role: 'Head of Technology',
-      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop',
-      description: 'Building scalable healthcare technology solutions'
+      role: 'UI Designer',
+      image: Ankit
     },
     {
       name: 'Preet Chaudhary',
-      role: 'Chief Operations Officer',
-      image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop',
-      description: 'Ensuring seamless operations and patient satisfaction'
+      role: 'Full Stack Developer',
+      image: PreetImage
     },
     {
       name: 'Vidant Bhardwaj',
-      role: 'Director of Patient Care',
-      image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop',
-      description: 'Dedicated to delivering exceptional patient experiences'
+      role: 'Frontend Developer',
+      image: Vidant
     }
   ];
 
-  const milestones = [
-    {
-      year: '2020',
-      title: 'Foundation',
-      description: 'MediConnect was founded with a vision to make healthcare accessible to all'
-    },
-    {
-      year: '2021',
-      title: 'First 100 Doctors',
-      description: 'Onboarded 100+ verified doctors across multiple specializations'
-    },
-    {
-      year: '2022',
-      title: 'Hospital Partnerships',
-      description: 'Partnered with 25+ major hospitals across India'
-    },
-    {
-      year: '2023',
-      title: '10,000 Patients',
-      description: 'Reached milestone of serving 10,000+ patients successfully'
-    },
-    {
-      year: '2024',
-      title: 'AI Integration',
-      description: 'Launched Medi-Bot for intelligent health assistance'
-    },
-    {
-      year: '2025',
-      title: 'National Expansion',
-      description: 'Expanded services to 50+ cities across India'
-    }
-  ];
+  
 
   const achievements = [
     {
@@ -325,37 +295,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Our Journey</h2>
-            <p className="text-xl text-slate-600">Key milestones in our growth story</p>
-          </div>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
-            <div className="space-y-12">
-              {milestones.map((milestone, idx) => (
-                <div key={idx} className={`flex items-center ${idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${idx % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
-                    <div className="bg-white rounded-2xl shadow-lg p-6 border border-slate-100 hover:shadow-xl transition">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">{milestone.year}</div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">{milestone.title}</h3>
-                      <p className="text-slate-600">{milestone.description}</p>
-                    </div>
-                  </div>
-                  <div className="w-6 h-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-                  <div className="w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Team Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-9xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Meet Our Leadership</h2>
             <p className="text-xl text-slate-600">The visionaries driving healthcare innovation</p>
@@ -382,7 +324,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Achievements */}
+      {/* Achievements
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -401,7 +343,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

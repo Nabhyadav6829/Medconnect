@@ -10,6 +10,10 @@ import Medicines from './pages/Avialablemedicine';
 // import Login from './pages/Login';
 import Signup from './pages/Signup'
 import BookConsultation from './pages/BookConsultation';
+import  Upload  from './pages/Upload';
+import Reports from './pages/reports'
+import ReportDetail from './pages/ReportDetail'
+
 
 export default function App() {
   return (
@@ -23,6 +27,9 @@ export default function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/medicines" element={<Medicines />} />
         <Route path="/signup" element={<Signup />}/>
+        <Route path="/upload" element={<Upload />}/>
+        <Route path="/reports" element={<Reports />} />
+        <Route path="/reports/:id" element={<ReportDetail />} />
         <Route path="/bookconsultation" element={<BookConsultation />}/>
       </Routes>
   );

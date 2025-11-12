@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { User, Mail, Phone, Calendar, MapPin, Heart, Activity, Droplet, Weight, Ruler, Pill, FileText, Clock, Edit2, Camera, AlertCircle, CheckCircle, Download, Eye } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'http://localhost:5001/api';
 import Navbar from './Navbar';
 
 export default function MedicalProfile() {

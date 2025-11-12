@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Video, Search, Filter, Star, Award, TrendingUp, MapPin, Heart, ArrowRight, CheckCircle, X } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'http://localhost:5001/api';
 
 import Navbar from './Navbar'
 
