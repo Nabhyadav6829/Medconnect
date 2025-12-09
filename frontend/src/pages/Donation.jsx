@@ -334,7 +334,7 @@ export default function MedicineDonation() {
             </div>
 
             {/* Info Cards */}
-            <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {/* <div className="mt-12 grid md:grid-cols-3 gap-6">
               <div className="text-center p-6 bg-blue-50 rounded-xl">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <CheckCircle className="w-6 h-6 text-white" />
@@ -358,7 +358,7 @@ export default function MedicineDonation() {
                 <h4 className="font-semibold text-slate-900 mb-2">Free Pickup</h4>
                 <p className="text-sm text-slate-600">We collect from your doorstep</p>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>

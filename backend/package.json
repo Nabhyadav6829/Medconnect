@@ -27,9 +27,12 @@
     "multer-storage-cloudinary": "^4.0.0",
     "nanoid": "^5.1.6",
     "nodemon": "^3.1.10",
-    "pdf-parse": "^2.4.5",
-    "pdfjs-dist": "^5.4.394",
+    "pdf-parse": "1.1.1",
+    "pdfjs-dist": "4.4.168",
     "razorpay": "^2.9.6",
     "tesseract.js": "^6.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.103.0"
   }
 }

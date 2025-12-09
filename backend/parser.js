@@ -1,26 +1,15 @@
+// parser.js → YEHI USE KAR, PURA REPLACE KAR DE
 const fs = require("fs/promises");
 const { createWorker } = require("tesseract.js");
-
-async function loadPdfjs() {
-  const pdfjsLib = await import("pdfjs-dist/legacy/build/pdf.mjs");
-  pdfjsLib.GlobalWorkerOptions.workerSrc = await import("pdfjs-dist/build/pdf.worker.mjs");
-  return pdfjsLib;
-}
+const pdf = require("pdf-parse");  // ← Correct import for v1.1.1 (direct function)
 
 async function extractTextFromPDF(filePath) {
-  const pdfjsLib = await loadPdfjs();
-  const data = new Uint8Array(await fs.readFile(filePath));
-  const pdf = await pdfjsLib.getDocument({ data }).promise;
-
-  let text = "";
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const content = await page.getTextContent();
-    const pageText = content.items.map((item) => item.str).join(" ");
-    text += pageText + "\n";
-  }
-
-  return text.trim();
+  const dataBuffer = await fs.readFile(filePath);
+  
+  // YEHI LINE V1 KE LIYE PERFECT HAI → pdf(buffer).then() style
+  const data = await pdf(dataBuffer);
+  
+  return data.text.trim();
 }
 
 async function extractTextFromImage(filePath) {
@@ -44,4 +33,3 @@ async function extractText(filePath, mimetype) {
 }
 
 module.exports = { extractTextFromPDF, extractTextFromImage, extractText };
-
